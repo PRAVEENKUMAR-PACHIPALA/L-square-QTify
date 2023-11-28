@@ -19,16 +19,17 @@ function App() {
   useEffect(() => {
     generateData("topAlbums", fetchTopAlbums);
     generateData("newAlbums", fetchNewAlbums);
+    generateData("allSongs", fetchNewAlbums);
   }, [])
 
-  const { topAlbums=[], newAlbums=[] } = data;
+  const { topAlbums=[], newAlbums=[], allSongs=[] } = data;
   console.log(data)
 
   return (
     <>
       <StyledEngineProvider injectFirst>
         <Navbar />
-        <Outlet context={{data: {topAlbums, newAlbums}}} />
+        <Outlet context={{data: {topAlbums, newAlbums, allSongs}}} />
       </StyledEngineProvider>
     </>
   );

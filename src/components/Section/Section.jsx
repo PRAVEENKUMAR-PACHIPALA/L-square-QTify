@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./Section.module.css";
 import Card from "../../components/Card/Card";
 import Carousel from "../Carousel/Carousel";
-import SkeletonLoader from "../SkeletonLoader/SkeletonLoader";
+// import SkeletonLoader from "../SkeletonLoader/SkeletonLoader";
 
 const Section = ({ title, data, type, header }) => {
 	const [carouselToggle, setCarouselToggle] = useState(true);
