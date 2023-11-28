@@ -4,7 +4,7 @@ import Card from "../../components/Card/Card";
 import Carousel from "../Carousel/Carousel";
 import SkeletonLoader from "../SkeletonLoader/SkeletonLoader";
 
-const Section = ({ title, data, type, header, loadingState }) => {
+const Section = ({ title, data, type, header }) => {
 	const [carouselToggle, setCarouselToggle] = useState(true);
 	const _handleToggle = () => {
 		setCarouselToggle(!carouselToggle);
@@ -38,9 +38,11 @@ const Section = ({ title, data, type, header, loadingState }) => {
 						/>
 					)}
 				</div>
-			) : loadingState ? (
-				<SkeletonLoader name={"card"} count={5} />
-			) : (
+			) : 
+			// loadingState ? (
+			// 	<SkeletonLoader name={"card"} count={5} />
+			// ) : 
+			(
 				<p>No Data found</p>
 			)}
 		</div>
