@@ -22,6 +22,7 @@ function App() {
   }, [])
 
   const { topAlbums=[], newAlbums=[] } = data;
+  console.log(data)
 
   return (
     <>

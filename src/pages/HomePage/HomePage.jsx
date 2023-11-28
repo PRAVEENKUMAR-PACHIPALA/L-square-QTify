@@ -6,7 +6,7 @@ import {styles} from "./HomePage.module.css"
 
 function Home(props) {
 
-	const data = useOutletContext();
+	const { data } = useOutletContext();
 	const { topAlbums, newAlbums } = data;
 
 	return (
