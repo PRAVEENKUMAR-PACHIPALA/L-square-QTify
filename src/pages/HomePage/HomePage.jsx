@@ -3,7 +3,7 @@ import Hero from "../../components/Hero/Hero";
 import Section from "../../components/Section/Section";
 import FilterTabs from "../../components/FilterTabs/FilterTabs";
 import { useOutletContext } from "react-router-dom";
-import {styles} from "./HomePage.module.css";
+import styles from "./HomePage.module.css";
 
 function Home(props) {
 
