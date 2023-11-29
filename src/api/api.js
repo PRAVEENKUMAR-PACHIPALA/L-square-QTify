@@ -28,3 +28,12 @@ export const fetchAllSongs = async () => {
 		console.log("ERROR IN API", err);
 	}
 };
+export const fetchAllGenres = async () => {
+	try {
+		const response = await axios.get(`${BACKEND_ENDPOINT}/genres`);
+        let data = [{key: "all", label: "All"}, ...response.data.data]
+		return data;
+	} catch (err) {
+		console.log("ERROR IN API", err);
+	}
+};

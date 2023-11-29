@@ -8,7 +8,8 @@ import styles from "./HomePage.module.css";
 function Home(props) {
 
 	const { data } = useOutletContext();
-	const { topAlbums, newAlbums, allSongs } = data;
+	const { topAlbums, newAlbums, allSongs, songFilters } = data;
+	console.log(allSongs, "Home");
 
 	return (
 		<>
@@ -21,7 +22,7 @@ function Home(props) {
 				<div>
 					<h3 className={styles.tabsTitle}>Songs</h3>
 				</div>
-				<FilterTabs data={allSongs} />
+				<FilterTabs data={allSongs} filters={songFilters} />
 			</div>
 		</>
 	);
